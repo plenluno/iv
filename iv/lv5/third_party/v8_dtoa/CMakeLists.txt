@@ -14,6 +14,10 @@ add_library(v8dtoa STATIC
     v8-dtoa.cc
 )
 
+target_link_libraries(v8dtoa
+    nldtoa
+)
+
 set_target_properties(v8dtoa PROPERTIES
     COMPILE_FLAGS ${libj-deps-cflags}
 )
